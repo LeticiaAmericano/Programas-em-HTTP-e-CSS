@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family-Montserrat:600|Open+Sans:600&display-swap");
 
-html,body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-.sidebar{
+.sidebar {
     position: fixed;
     width: 240px;
     left: -240px;
@@ -16,7 +17,7 @@ html,body {
     border-right: 2px solid #218C82;
 }
 
-.title{
+.title {
     font-size: 24px;
     color: white;
     line-height: 70px;
@@ -25,7 +26,7 @@ html,body {
     font-family: "Montserrat", sans-serif;
 }
 
-.sidebar a{
+.sidebar a {
     display: block;
     height: 65px;
     width: 100%;
@@ -41,33 +42,35 @@ html,body {
     text-decoration: none;
 }
 
-a.active, a:hover{
+a.active,
+a:hover {
     border-left: 5px solid #14554F;
     color: #1E7970;
 }
 
-.sidebar a i{
+.sidebar a i {
     font-size: 23px;
-    margin-right:16px;
+    margin-right: 16px;
 }
 
-.sidebar a span{
+.sidebar a span {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-#check{
+#check {
     display: none;
 }
 
-label #btn, label #cancel{
+label #btn,
+label #cancel {
     position: absolute;
     cursor: pointer;
     color: white;
     border-radius: 5px;
     border: 1px solid #218C82;
-    margin: 15px 30px;
+    margin: 5px 30px;
     font-size: 28px;
     background-color: #26A69A;
     height: 45px;
@@ -77,54 +80,62 @@ label #btn, label #cancel{
     transition: all .5s ease;
 }
 
-label #cancel{
+label #cancel {
     opacity: 0;
     visibility: hidden;
 }
 
-#check:checked ~ .sidebar{
+#check:checked~.sidebar {
     left: 0;
 }
 
-#check:checked ~ label #btn{
+#check:checked~label #btn {
     margin-left: 245px;
     opacity: 0;
     visibility: hidden;
 }
 
-@media(max-width: 860px){
-    .sidebar{
+#check:checked~label #cancel {
+    margin-left: 245px;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media(max-width: 860px) {
+    .sidebar {
         height: auto;
         width: 70px;
         left: 0;
         margin: 100px 0;
     }
 
-    .title, #btn, #cancel{
+    .title,
+    #btn,
+    #cancel {
         display: none;
     }
 
-    span{
+    span {
         position: absolute;
         margin-left: 23px;
         opacity: 0;
         visibility: hidden;
     }
 
-    .sidebar a{
+    .sidebar a {
         height: 60px;
     }
 
-    .sidebar a i{
+    .sidebar a i {
         margin-left: -10px;
     }
 
-    a:houver{
+    a:houver {
         width: 200px;
         background: inherit;
     }
 
-    .sidebar a:houver span{
+    .sidebar a:houver span {
         opacity: 1;
         visibility: visible;
     }
