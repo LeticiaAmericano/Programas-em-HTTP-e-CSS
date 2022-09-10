@@ -270,7 +270,9 @@ body {
 }
 
 .sidebar.active ul li a:hover>.links-name {
-    background-color: #155f58;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
 }
 
 .sidebar.active .btn-search {
