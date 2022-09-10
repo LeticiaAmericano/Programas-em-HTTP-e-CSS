@@ -261,6 +261,18 @@ body {
     pointer-events: auto;
 }
 
+.sidebar ul li a:hover>.links-name {
+    display: block;
+    background-color: #26A69A;
+    padding: 0 10px;
+    pointer-events: auto;
+    border-radius: 0 12px 12px 0;
+}
+
+.sidebar.active ul li a:hover>.links-name {
+    background-color: #155f58;
+}
+
 .sidebar.active .btn-search {
     opacity: 1;
 }
