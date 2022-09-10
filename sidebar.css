@@ -1,20 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
+    /* border: 1px solid lime; */
 }
 
-body{
+body {
     position: relative;
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
 }
 
-.sidebar{
+.sidebar {
     position: fixed;
-    width: 5%;             /*Colocar o maximo que pode crescer e o minimo*/
+    width: 70px;
+    /*Colocar o maximo que pode crescer e o minimo*/
     left: 0;
     top: 0;
     height: 100%;
@@ -23,11 +25,12 @@ body{
     transition: all 0.5s ease;
 }
 
-.sidebar .logo-content .logo{
+.sidebar .logo-content .logo {
     width: 100%;
     color: white;
     height: 50px;
     display: flex;
+    justify-content: baseline;
     align-items: center;
     color: white;
     padding-top: 15%;
@@ -35,31 +38,31 @@ body{
     pointer-events: auto;
 }
 
-.sidebar .links-name{
+.sidebar .-name {
     opacity: 0;
     pointer-events: none;
 }
 
-.sidebar .logo-content .logo i{
+.sidebar .logo-content .logo i {
     font-size: 30px;
     margin-right: 10%;
     margin-left: 2%;
 }
 
-.sidebar .logo-content .logo .logo-name{
-    font-weight:  500;
+.sidebar .logo-content .logo .logo-name {
+    font-weight: 500;
     text-align: center;
+    font-size: 1.4em;
     padding-top: 4%;
 }
 
-.sidebar .btn-search
-{
+.sidebar .btn-search {
     opacity: 0;
 }
 
-.sidebar #btn{
+.sidebar #btn {
     position: absolute;
-    top: 3.5%;
+    top: 3%;
     left: 50%;
     color: white;
     transform: translateX(-50%);
@@ -71,11 +74,14 @@ body{
     cursor: pointer;
 }
 
-.sidebar ul{
-    margin-top: 20%;
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+    margin: 20% 0 0 0;
+    padding: 10px;
 }
 
-.sidebar ul li{
+.sidebar ul li {
     position: relative;
     width: 100%;
     height: 60px;
@@ -84,7 +90,7 @@ body{
     margin-bottom: 10%;
 }
 
-.sidebar ul li input{
+.sidebar ul li input {
     position: absolute;
     top: 0;
     left: 0;
@@ -99,8 +105,7 @@ body{
     color: black;
 }
 
-.sidebar ul li .search
-{
+.sidebar ul li .search {
     position: absolute;
     font-size: 20px;
     color: black;
@@ -108,14 +113,14 @@ body{
     cursor: pointer;
 }
 
-.sidebar ul li .search:hover{
+.sidebar ul li .search:hover {
     background-color: rgb(231, 230, 230);
     color: black;
 }
 
-.sidebar ul li a{
-    display: block;
-    align-items: center;
+.sidebar ul li a {
+    display: flex;
+    align-items: flex-start;
     text-decoration: none;
     color: white;
     text-decoration: none;
@@ -124,12 +129,12 @@ body{
     transition: all 0.5s ease;
 }
 
-.sidebar ul li a:hover{
+.sidebar ul li a:hover {
     color: white;
     background-color: #155f58;
 }
 
-.sidebar ul li i{
+.sidebar ul li i {
     min-width: 50px;
     height: 60px;
     line-height: 60px;
@@ -137,7 +142,7 @@ body{
     text-align: center;
 }
 
-.sidebar .profile-content{
+.sidebar .profile-content {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -145,7 +150,7 @@ body{
     color: white;
 }
 
-.sidebar .profile-content .profile{
+.sidebar .profile-content .profile {
     position: relative;
     height: 60px;
     padding-left: 5%;
@@ -154,7 +159,7 @@ body{
     padding-top: 3%;
 }
 
-.sidebar .profile-content .profile .profile-detail{
+.sidebar .profile-content .profile .profile-detail {
     display: flex;
     align-items: center;
     pointer-events: none;
@@ -163,7 +168,7 @@ body{
     pointer-events: none;
 }
 
-.sidebar .profile-content .profile .profile-detail img{
+.sidebar .profile-content .profile .profile-detail img {
     width: 45px;
     height: 45px;
     object-fit: cover;
@@ -172,13 +177,13 @@ body{
 
 }
 
-.sidebar .profile-content .profile .profile-detail .name{
+.sidebar .profile-content .profile .profile-detail .name {
     padding-left: 5%;
     font-size: 15px;
     font-weight: 400;
 }
 
-.sidebar .profile-content .profile #logout{
+.sidebar .profile-content .profile #logout {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -191,7 +196,7 @@ body{
     border-radius: 12px;
 }
 
-.toolipe{
+.toolipe {
     position: absolute;
     left: 30%;
     width: 50%;
@@ -209,61 +214,66 @@ body{
     opacity: 0;
 }
 
-.toolipe ul li:hover .toolipe{
+.toolipe ul li:hover .toolipe {
     transition: all 0.5s ease;
     top: 50%;
     opacity: 1;
 }
 
-.home-content{
-    position:absolute;
+.home-content {
+    position: absolute;
     top: 0;
-    left: 5%;
-    width: calc(100% - 20%);
+    left: 7%;
+    width: calc(100% - 350px);
     transition: all 0.5s ease;
 }
 
-.home-content h2{
+.home-content h2 {
     margin: 15px;
     font-size: 25px;
     font-weight: 300;
     color: black;
 }
 
-.sidebar.active{
-    width: 20%;
+.sidebar.active {
+    width: 300px;
 }
 
-.home-content.active{
-    left: 20%;
+.home-content.active {
+    left: 23%;
 }
 
-.sidebar.active .logo-content .logo{
+.sidebar.active .logo-content .logo {
     opacity: 1;
 }
 
-.sidebar.active #btn{
+.sidebar.active #btn {
     left: 90%;
 }
 
-.sidebar.active .links-name{
+.sidebar .links-name {
+    display: none;
+    pointer-events: auto;
+}
+
+.sidebar.active .links-name {
+    display: block;
+    pointer-events: auto;
+}
+
+.sidebar.active .btn-search {
+    opacity: 1;
+}
+
+.sidebar.active .profile-content .profile .profile-detail {
     opacity: 1;
     pointer-events: auto;
 }
 
-.sidebar.active .btn-search{
-    opacity: 1;
-}
-
-.sidebar.active .profile-content .profile .profile-detail{
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.sidebar.active .profile-content .profile #logout{
+.sidebar.active .profile-content .profile #logout {
     left: 90%;
 }
 
-.sidebar.active .toolipe{   
+.sidebar.active .toolipe {
     display: none;
 }
